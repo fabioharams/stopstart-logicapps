@@ -24,7 +24,7 @@ This procedure use Azure Logic Apps to stop/start VMs on Azure using any schedul
 
 >5. Click on **Schedule**. The **Trigger** option will appear and then select **Recurrence**. 
 
-![img7](/img/img6.png)
+![img7](/img/img7.png)
 
 >6. 
 
