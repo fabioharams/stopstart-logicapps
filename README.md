@@ -26,7 +26,9 @@ This procedure use Azure Logic Apps to stop/start VMs on Azure using any schedul
 
 ![img7](/img/img7.png)
 
->6. 
+>6. On **Interval** field type **1**. Select **Week** on **Frequency** field. Use the other options for **Parameters** field:
+
+![img7](/img/img7.png)
 
 
 
