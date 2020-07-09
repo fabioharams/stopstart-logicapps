@@ -109,11 +109,11 @@ The tip here is to input X hours after the first **Recurrence** to execute anoth
 
 Click on **+ New step** and type **Azure VM**.
 
-[img21](/img/img21.png)
+![img21](/img/img21.png)
 
 Select **Start virtual machine** option. Now you have to do the same from previous steps when you had added the same virtual machines. Also you can repeat the same steps openning the **Logic app code view** and adding the required virtual machines. 
 
-[img22](/img/img22.png)
+![img22](/img/img22.png)
 
 Now you can save the Logic App. If you want to test just change the **Step 11** (use 10min for example) and click on **Run** to execute manually. After the tests just remember to change back the paramenters. 
 
