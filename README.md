@@ -1,4 +1,4 @@
-# stopstart-logicapps
+# Stop/Start VMs on Azure using Logic Apps
 
 This procedure use Azure Logic Apps to stop/start VMs on Azure using any schedule. This is an alternative instead of Azure Automation. Also you can use this method for Windows Virtual Desktop (WVD). 
 
