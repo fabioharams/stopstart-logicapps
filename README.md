@@ -1,6 +1,6 @@
 # stopstart-logicapps
 
-This procedure use Azure Logic Apps to stop/start VMs on Azure using any schedule.
+This procedure use Azure Logic Apps to stop/start VMs on Azure using any schedule. This is an alternative instead of Azure Automation. Also you can use this method for Windows Virtual Desktop (WVD). 
 
 >1. Open **Azure Portal**, click **+ Create a Resource** , type  **Logic App** and press **ENTER**
 
@@ -58,6 +58,64 @@ Note: The option **Deallocate** will stop the VM and them will deallocate. You d
 
 For this lab I'm selecting the option **Sign in** 
 
+>9. Select the parameters for the virtual machine
+
+- Subscription ID
+- Resource Group
+- Virtual Machine
+
+![img11](/img/img11.png)
+  
+>Note: Don't worry if you want to add more virtual machines to be stopped. Also you don't need to create 1 Logic App per virtual machine. If you just want to stop/start 1 virtual machine just skip to step 
+
+--------------------
+
+
+
+>10. To add more Virtual Machines just click on **+** sign between the **Recurrence** block and **Deallocate virtual machine** block. The pop-up will appear with the option **Insert a next step**. Select the option **Add a parallel branch**
+
+![img12](/img/img12.png)
+
+![img13](/img/img13.png)
+
+
+Now a new parallel task will open and you can do the same for other virtual machine 
+
+
+![img14](/img/img14.png)
+
+This step is easy but if you have more than 5 virtual machines to include could be a problem. To avoid this just click on **Save** and then click on **Logic app code view**.
+
+![img15](/img/img15.png)
+
+A JSON format will appear and look at the **actions** section. You will see that the 2 virtual machines created before are listed here. You can copy/paste the lines and just change the line **path**. With this method you can easily add more virtual machines. 
+
+![img16](/img/img16.png)
+
+After adding the virtual machines click on **save** and then click on **designer** to return the previous view.
+
+![img17](/img/img17.png)
+
+
+>11. Now you can setup the start time. Click on **+ New Step** button, type **SCHEDULE**, click on **Delay Schedule** to add another **Recurrence**. 
+
+![img18](/img/img18.png)
+
+![img19](/img/img19.png)
+
+The tip here is to input X hours after the first **Recurrence** to execute another task. For this test I will use 8 hours. 
+
+![img20](/img/img20.png)
+
+Click on **+ New step** and type **Azure VM**.
+
+[img21](/img/img21.png)
+
+Select **Start virtual machine** option. Now you have to do the same from previous steps when you had added the same virtual machines. Also you can repeat the same steps openning the **Logic app code view** and adding the required virtual machines. 
+
+[img22](/img/img22.png)
+
+Now you can save the Logic App. If you want to test just change the **Step 11** (use 10min for example) and click on **Run** to execute manually. After the tests just remember to change back the paramenters. 
 
 
 
